@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 form label {
@@ -64,6 +64,12 @@ header {
   margin-bottom: 20px;
 }
 
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 header h1 {
   text-align: center;
   margin: 0;
@@ -73,12 +79,6 @@ header h1 {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
-}
-
-header nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 header nav ul {
@@ -152,6 +152,18 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
+  body {
+    font-family: "Lato", sans-serif;
+    display: grid;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  header nav ul {
+    align-items: center;
+  }
   form {
     display: flex;
     align-items: center;
@@ -166,5 +178,27 @@ footer p {
   form select,
   form input {
     margin-bottom: 0px;
+  }
+  body {
+    font-family: "Lato", sans-serif;
+    display: grid;
+  }
+
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
+  }
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+  .item {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .item-double {
+    flex: 2;
   }
 }
