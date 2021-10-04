@@ -34,6 +34,11 @@ main img {
   width: 100px;
 }
 
+form label {
+  display: flex;
+  padding: 0 8px;
+}
+
 /* ---  Groups & Items --- */
 
 .group {
@@ -56,12 +61,30 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
 }
 
 header nav ul li {
@@ -79,6 +102,10 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
@@ -87,6 +114,12 @@ form {
 
 form label {
   font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
 }
 
 form select,
@@ -117,3 +150,21 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  form div {
+    flex-direction: column;
+  }
+  form button {
+    flex: 1;
+  }
+  form select,
+  form input {
+    margin-bottom: 0px;
+  }
+}
