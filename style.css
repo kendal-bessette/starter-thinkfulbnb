@@ -34,11 +34,6 @@ main img {
   width: 100%;
 }
 
-form label {
-  display: flex;
-  padding: 0 8px;
-}
-
 /* ---  Groups & Items --- */
 
 .group {
@@ -137,6 +132,10 @@ form button {
   width: 100%;
 }
 
+form label {
+  display: flex;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -151,37 +150,54 @@ footer p {
 
 /* -------  Media Query ------- */
 
+/* Add media query for screens larger than 480px */
+
 @media all and (min-width: 480px) {
   body {
     font-family: "Lato", sans-serif;
-    display: grid;
+    display: flex;
   }
   header {
     display: flex;
     justify-content: space-between;
     padding: 0;
   }
+
   header nav ul {
     align-items: center;
   }
+
   form {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   form div {
     flex-direction: column;
   }
+
   form button {
     flex: 1;
   }
+
   form select,
   form input {
     margin-bottom: 0px;
   }
+
+  form label {
+    display: flex;
+  }
+  
   body {
     font-family: "Lato", sans-serif;
     display: grid;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
   }
 
   .logo {
@@ -189,16 +205,15 @@ footer p {
     padding-top: 0;
     font-size: 42px;
   }
-  .group {
-    flex-direction: row;
-    align-items: center;
-  }
-  .item {
-    flex: 1;
-    margin: 10px;
+
+  /* set the items section to a 2x2 grid */
+  #ideas .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
-  .item-double {
-    flex: 2;
+  #ideas .item {
+    flex: 40%;
   }
 }
